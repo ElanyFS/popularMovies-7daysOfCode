@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popular Movies</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/estilos.css" />
+    <link rel="stylesheet" href="/assets/css/flexbox.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body>
+    <main class="flex_container">
+      <h1>Filmes Populares</h1>
+
+      <form action="" class="content_formulario">
+        <input type="text" placeholder="Digite algum filme para pesquisar..." />
+        <button>
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </form>
+
+      <div class="container_favoritos">
+        <input type="checkbox" name="" id="" />
+        <label for="">Mostrar apenas meus filmes favoritos</label>
+      </div>
+
+      <ul>
+        <li>
+          <div class="content">
+            <img src="assets/img/Frame 2.png" alt="" />
+
+            <div class="content_info">
+              <p>Batman(2022)</p>
+              <div class="movie_info">
+                <div class="movie_detals">
+                  <img src="assets/img/Star.svg" alt="" />
+                  <p>9,2</p>
+                </div>
+
+                <div class="movie_detals">
+                  <img src="assets/img/Heart.svg" alt="" />
+                  <p>Favoritar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>

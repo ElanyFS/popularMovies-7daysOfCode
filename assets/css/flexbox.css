@@ -1,0 +1,43 @@
+.flex_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content_formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.movie_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.movie_detals {
+  display: flex;
+  gap: 0.5rem;
+}

@@ -1,0 +1,65 @@
+body {
+  background-color: #17162e;
+  color: #fff;
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 1.5rem 0;
+}
+
+.flex_container {
+  height: 100vh;
+}
+
+.flex_container h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 44.65px;
+}
+
+.content_formulario {
+  width: 60%;
+}
+
+.content_formulario input {
+  width: 100%;
+  border-radius: 8px;
+  padding: 7px 12px;
+  height: 74px;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color: #4a4a4a;
+}
+
+.content_formulario button {
+  position: relative;
+  right: 4%;
+  top: 4%;
+}
+
+ul {
+  width: 90%;
+}
+
+li {
+  padding: 0 0.5rem;
+  background-color: #1d1c3b;
+  border-radius: 8px;
+  box-shadow: 6.57px 4.91px 12.84px 0px #00000013;
+}
+
+li > p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 31.86px;
+}
+
+.content_info > p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22.32px;
+}
+
+.movie_detals p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.32px;
+}
