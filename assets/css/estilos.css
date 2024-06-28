@@ -40,7 +40,7 @@ ul {
 }
 
 li {
-  padding: 0 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: #1d1c3b;
   border-radius: 8px;
   box-shadow: 6.57px 4.91px 12.84px 0px #00000013;
@@ -58,8 +58,15 @@ li > p {
   line-height: 22.32px;
 }
 
-.movie_detals p {
+.movie_detals > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 22.32px;
+}
+
+.content>img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
