@@ -3,10 +3,12 @@ body {
   color: #fff;
   font-family: "Kumbh Sans", sans-serif;
   padding: 1.5rem;
+  height: auto;
 }
 
 .flex_container {
   min-height: 100vh;
+  height: auto;
 }
 
 .flex_container h1 {
@@ -33,6 +35,8 @@ body {
   position: relative;
   right: 4%;
   top: 4%;
+  text-align: center;
+  cursor: pointer;
 }
 
 ul {
