@@ -1,0 +1,6 @@
+const config = {
+  apiKey: '139b5618132eed9b5b3dfee031ed0af9',
+  tokenKey: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMzliNTYxODEzMmVlZDliNWIzZGZlZTAzMWVkMGFmOSIsIm5iZiI6MTcxOTkyMDA2NC43OTQwOTYsInN1YiI6IjY2N2M0ODc3NWY4NmM1ZjYwZmQyMzE5OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v0lR4nb5zQSstVSTnR4wJFwQsSko5WeMZ1pMHqzw8ag'
+};
+
+export default config;

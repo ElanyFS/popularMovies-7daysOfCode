@@ -2,11 +2,11 @@ body {
   background-color: #17162e;
   color: #fff;
   font-family: "Kumbh Sans", sans-serif;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
 }
 
 .flex_container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .flex_container h1 {
@@ -52,10 +52,18 @@ li > p {
   line-height: 31.86px;
 }
 
+.content_info {
+  width: 100%;
+}
+
 .content_info > p {
   font-weight: 500;
   font-size: 18px;
   line-height: 22.32px;
+}
+
+.movie_info {
+  width: 80%;
 }
 
 .movie_detals > p {
@@ -67,6 +75,6 @@ li > p {
 .content>img{
   width: 5rem;
   height: 5rem;
-  border-radius: 50%;
+  border-radius: 1%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }

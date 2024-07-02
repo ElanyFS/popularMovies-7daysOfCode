@@ -1,39 +1,26 @@
-const movies = [
-  {
-    image:
-      "https://img.elo7.com.br/product/original/3FBA809/big-poster-filme-batman-2022-90x60-cm-lo002-poster-batman.jpg",
-    title: "Batman",
-    rating: 9.2,
-    year: 2022,
-    description:
-      "Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.",
-    isFavorited: true,
-  },
-  {
-    image:
-      "https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg",
-    title: "Avengers",
-    rating: 9.2,
-    year: 2019,
-    description:
-      "Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
-    isFavorited: false,
-  },
-  {
-    image:
-      "https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg",
-    title: "Doctor Strange",
-    rating: 9.2,
-    year: 2022,
-    description:
-      "O aguardado filme trata da jornada do Doutor Estranho rumo ao desconhecido. Além de receber ajuda de novos aliados místicos e outros já conhecidos do público, o personagem atravessa as realidades alternativas incompreensíveis e perigosas do Multiverso para enfrentar um novo e misterioso adversário.",
-    isFavorited: false,
-  },
-];
+import config from "./chave.js";
+
+async function getMovies() {
+  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${config.apiKey}&language=pt-BR`;
+
+  const fetchMovies = await fetch(url);
+
+  const {results}= await fetchMovies.json();
+
+  return results;
+}
 
 const ulCards = document.querySelector("[data-ulCard]");
 
-function criarCardFilmes(image, title, rating, year, description, isFavorited) {
+function criarCardFilmes(movie) {
+
+  const {title, poster_path, vote_average, release_date, overview} = movie;
+  const isFavorited = false;
+
+  const dataFilme = new Date(release_date).getFullYear();
+
+  const image = `https://image.tmdb.org/t/p/w500${poster_path}`
+
   const li = document.createElement("li");
   let imgUrl;
   let favorito;
@@ -43,7 +30,7 @@ function criarCardFilmes(image, title, rating, year, description, isFavorited) {
     favorito = "Favorito";
   } else {
     imgUrl = `../assets/img/Heart.svg`;
-    favorito = "Favoritar";
+    favorito = "Favoritar"
   }
 
   li.innerHTML = `
@@ -51,11 +38,11 @@ function criarCardFilmes(image, title, rating, year, description, isFavorited) {
             <img src="${image}" alt="" />
 
             <div class="content_info">
-              <p>${title} - ${year}</p>
+              <p>${title} - ${dataFilme}</p>
               <div class="movie_info">
                 <div class="movie_detals">
                   <img src="assets/img/Star.svg" alt="" />
-                  <p>${rating}</p>
+                  <p>${vote_average}</p>
                 </div>
 
                 <div class="movie_detals">
@@ -67,22 +54,16 @@ function criarCardFilmes(image, title, rating, year, description, isFavorited) {
         </div>
 
         <p class="description">
-            ${description}
+            ${overview}
         </p>
     `;
 
   return li;
 }
 
-movies.forEach((movie) => {
-  ulCards.appendChild(
-    criarCardFilmes(
-      movie.image,
-      movie.title,
-      movie.rating,
-      movie.year,
-      movie.description,
-      movie.isFavorited
-    )
-  );
-});
+window.onload = async function () {
+  const movies = await getMovies();
+  movies.forEach((movie) => {
+    ulCards.appendChild(criarCardFilmes(movie));
+  });
+};
