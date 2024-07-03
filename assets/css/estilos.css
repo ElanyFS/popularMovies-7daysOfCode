@@ -15,6 +15,7 @@ body {
   font-weight: 600;
   font-size: 2rem;
   line-height: 44.65px;
+  white-space: nowrap;
 }
 
 .content_formulario {
@@ -23,7 +24,7 @@ body {
 
 .content_formulario input {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
   padding: 7px 12px;
   height: 74px;
   outline: none;
@@ -32,11 +33,12 @@ body {
 }
 
 .content_formulario button {
-  position: relative;
-  right: 4%;
-  top: 4%;
   text-align: center;
   cursor: pointer;
+  background-color: #4a4a4a;
+  padding: 7px;
+  height: 74px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 ul {
@@ -70,15 +72,52 @@ li > p {
   width: 80%;
 }
 
-.movie_detals > p {
+.movie_detals > p,
+.movie_detals_favorito > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 22.32px;
 }
 
-.content>img{
+.movie_detals_favorito{
+  cursor: pointer;
+}
+
+
+.content > img {
   width: 5rem;
   height: 5rem;
   border-radius: 1%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (width <= 884px) {
+  .content_formulario button {
+    
+  }
+}
+
+@media (width <= 691px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 428px) {
+  .flex_container h1 {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  body {
+    padding: 1rem;
+  }
+
+  .content_formulario {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
 }

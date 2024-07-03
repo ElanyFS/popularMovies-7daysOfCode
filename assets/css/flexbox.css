@@ -3,12 +3,17 @@
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .content_formulario {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container_favoritos {
+  text-align: center;
 }
 
 ul {
@@ -39,6 +44,7 @@ li > p {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .movie_info {
@@ -48,7 +54,10 @@ li > p {
   gap: 2rem;
 }
 
-.movie_detals {
+.movie_detals,
+.movie_detals_favorito {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
