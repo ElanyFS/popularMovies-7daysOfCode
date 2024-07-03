@@ -1,4 +1,4 @@
-![](assets/image/imgProjeto.png)
+![](assets/img/imgProjeto.png)
 
 # Popular Movies
 
@@ -18,11 +18,11 @@ Pesquisa básica de filmes por título.
 
 ## 🛠️ Tecnologias 
 
-<img src="assets/image/html.png" width="50" height="50">
+<img src="assets/img/html.png" width="50" height="50">
 
-<img src="assets/image/css.png" width="50" height="50">
+<img src="assets/img/css.png" width="50" height="50">
 
-<img src="assets/image/js.png" width="50" height="50">
+<img src="assets/img/js.png" width="50" height="50">
 
 ## ⌛ Status do Projeto
 
