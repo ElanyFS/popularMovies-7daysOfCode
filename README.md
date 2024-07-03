@@ -8,13 +8,13 @@ Este projeto foi desenvolvido como parte do desafio #7DaysOfCode, com o objetivo
 
 ## 🎯 Funcionalidades
 
-Consumo de uma API de filmes para obter os dados dos filmes mais populares.
+° Consumo de uma API de filmes para obter os dados dos filmes mais populares.
 
-Exibição dos filmes em uma interface amigável e responsiva.
+° Exibição dos filmes em uma interface amigável e responsiva.
 
-Capacidade de favoritar filmes para acesso rápido.
+° Capacidade de favoritar filmes para acesso rápido.
 
-Pesquisa básica de filmes por título.
+° Pesquisa básica de filmes por título.
 
 ## 🛠️ Tecnologias 
 
