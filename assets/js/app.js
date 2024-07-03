@@ -1,7 +1,5 @@
 import config from "./chave.js";
 
-// https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${title}&language=en-US&page=1
-
 const ulCards = document.querySelector("[data-ulCard]");
 const inputFilme = document.querySelector(".inputFilme");
 const form = document.querySelector(".content_formulario");
@@ -17,10 +15,14 @@ async function getMovies() {
   return results;
 }
 
-window.onload = async function () {
+async function getFilmes() {
   const movies = await getMovies();
 
   movies.forEach((movie) => ulCards.appendChild(criarElementoLi(movie)));
+}
+
+window.onload = async function () {
+  getFilmes();
 };
 
 // Busca filmes por id
@@ -37,8 +39,6 @@ async function searchFilmes() {
   if (inputFilme.value != "") {
     ulCards.innerHTML = "";
     const movies = await getByFilmes(inputFilme.value);
-
-    // console.log(movies);
 
     movies.forEach((movie) => {
       ulCards.appendChild(criarElementoLi(movie));
@@ -57,12 +57,12 @@ function favoriteButtonPressed(event, movie) {
   const imgFavorito = {
     favorito: "/assets/img/Vector.svg",
     notFavorito: "/assets/img/Heart.svg",
-  }
+  };
 
   if (event.target.src.includes(imgFavorito.notFavorito)) {
     setFavorito(movie);
     event.target.src = imgFavorito.favorito;
-  }else {
+  } else {
     removeFavorito(movie);
     event.target.src = imgFavorito.notFavorito;
   }
@@ -81,13 +81,9 @@ function setFavorito(movie) {
 function removeFavorito(movie) {
   const movies = getFavoritoLocalStorage() || [];
 
-  const find = movies.find(movie => movie.id == movie.id)
+  const find = movies.find((movie) => movie.id == movie.id);
 
-  const newMovies = movies.filter(movie => movie.id != find.id);
-
-  // movies.push(movie);
-
-  // const movieString = JSON.stringify(movies);
+  const newMovies = movies.filter((movie) => movie.id != find.id);
 
   localStorage.setItem("itensFavoritos", JSON.stringify(newMovies));
 }
@@ -159,7 +155,7 @@ function criarElementoLi(movie) {
   });
 
   const paragrafoFavorito = document.createElement("p");
-  paragrafoFavorito.innerHTML = 'Favorito'
+  paragrafoFavorito.innerHTML = "Favorito";
 
   movieDetalsFavorito.appendChild(imagemFavorito);
   movieDetalsFavorito.appendChild(paragrafoFavorito);
@@ -195,4 +191,22 @@ function criarElementoLi(movie) {
   return li;
 }
 
-console.log(getFavoritoLocalStorage());
+document.addEventListener("DOMContentLoaded", () => {
+  const inputCheckbox = document.querySelector("#inputCheckbox");
+
+  inputCheckbox.addEventListener("change", () => {
+    if (inputCheckbox.checked) {
+      ulCards.innerHTML = ``;
+
+      const movies = getFavoritoLocalStorage();
+
+      movies.forEach((movie) => {
+        ulCards.appendChild(criarElementoLi(movie));
+        console.log(movie);
+      });
+    } else {
+      ulCards.innerHTML = "";
+      getFilmes();
+    }
+  });
+});
