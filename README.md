@@ -18,11 +18,11 @@ Este projeto foi desenvolvido como parte do desafio #7DaysOfCode, com o objetivo
 
 ## 🛠️ Tecnologias 
 
-<img src="assets/img/html.png" width="50" height="50">
+<img src="assets/img/html.png" width="50" height="50"> para estrutura da página.
 
-<img src="assets/img/css.png" width="50" height="50">
+<img src="assets/img/css.png" width="50" height="50"> para estilo da página.
 
-<img src="assets/img/js.png" width="50" height="50">
+<img src="assets/img/js.png" width="50" height="50"> para manipulação do DOM e interações com a API.
 
 ## ⌛ Status do Projeto
 
