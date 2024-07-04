@@ -27,7 +27,7 @@ window.onload = async function () {
 
 // Busca filmes por id
 async function getByFilmes(title) {
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=${config.apiKey}&query=${title}&language=en-US&page=1`;
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${config.apiKey}&query=${title}&language=pt-BR&page=1`;
   const filmes = await fetch(url);
 
   const { results } = await filmes.json();
