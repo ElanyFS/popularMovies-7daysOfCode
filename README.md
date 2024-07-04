@@ -8,21 +8,21 @@ Este projeto foi desenvolvido como parte do desafio #7DaysOfCode, com o objetivo
 
 ## 🎯 Funcionalidades
 
-Consumo de uma API de filmes para obter os dados dos filmes mais populares.
+° Consumo de uma API de filmes para obter os dados dos filmes mais populares.
 
-Exibição dos filmes em uma interface amigável e responsiva.
+° Exibição dos filmes em uma interface amigável e responsiva.
 
-Capacidade de favoritar filmes para acesso rápido.
+° Capacidade de favoritar filmes para acesso rápido.
 
-Pesquisa básica de filmes por título.
+° Pesquisa básica de filmes por título.
 
 ## 🛠️ Tecnologias 
 
-<img src="assets/img/html.png" width="50" height="50">
+<img src="assets/img/html.png" width="50" height="50"> para estrutura da página.
 
-<img src="assets/img/css.png" width="50" height="50">
+<img src="assets/img/css.png" width="50" height="50"> para estilo da página.
 
-<img src="assets/img/js.png" width="50" height="50">
+<img src="assets/img/js.png" width="50" height="50"> para manipulação do DOM e interações com a API.
 
 ## ⌛ Status do Projeto
 
